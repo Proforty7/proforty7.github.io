@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+section.hero {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(97.66%, rgba(0, 0, 0, 0.38))), url(../assets/bg-hero.jpg);
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.38) 97.66%), url(../assets/bg-hero.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+section.hero .pic {
+  border: 6px solid #7f95d1;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+section.hero .pic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 90px;
+}
+
+section.hero .name {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=index.css.map */

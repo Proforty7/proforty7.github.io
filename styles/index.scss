@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
+$colors: (
+  light: #fff,
+  primary: #7f95d1,
+);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+section.hero {
+  height: 100vh;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.38) 97.66%),
+    url(../assets/bg-hero.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: map-get($map: $colors, $key: light);
+
+  .pic {
+    border: 6px solid map-get($map: $colors, $key: primary);
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 90px;
+    }
+  }
+
+  .name {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+}
