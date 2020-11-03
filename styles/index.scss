@@ -13,7 +13,7 @@ $colors: (
 
 section.hero {
   height: 100vh;
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.38) 97.66%),
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.71) 97.66%),
     url(../assets/bg-hero.jpg);
   background-size: cover;
   display: flex;
@@ -29,8 +29,6 @@ section.hero {
     border-radius: 100px;
 
     img {
-      height: 100%;
-      width: 100%;
       border-radius: 90px;
     }
   }
@@ -39,4 +37,49 @@ section.hero {
     margin-top: 1rem;
     font-size: 1.4rem;
   }
+
+  .title {
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  .btn-container {
+    display: flex;
+    margin-top: 2rem;
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.2rem;
+
+      background-color: map-get($map: $colors, $key: primary);
+      border-radius: 5px;
+
+      &.flat {
+        background-color: inherit;
+        color: map-get($map: $colors, $key: primary);
+      }
+    }
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 6rem;
+  animation-name: animate-scroll;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes animate-scroll {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.arrow {
 }
