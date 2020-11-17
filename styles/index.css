@@ -11,6 +11,7 @@ body {
 }
 
 section.hero {
+  position: relative;
   height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(97.66%, rgba(0, 0, 0, 0.71))), url(../assets/bg-hero.jpg);
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.71) 97.66%), url(../assets/bg-hero.jpg);
@@ -29,6 +30,38 @@ section.hero {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+}
+
+section.hero .socials {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.hero .socials .item {
+  padding: 1rem;
+}
+
+section.hero .socials .fb {
+  background-color: #1877f2;
+}
+
+section.hero .socials .insta {
+  background-color: #c32aa3;
+}
+
+section.hero .socials .git {
+  background-color: #6cc644;
+}
+
+section.hero .socials .linkedin {
+  background-color: #0077b5;
 }
 
 section.hero .pic {
@@ -61,6 +94,7 @@ section.hero .btn-container {
 }
 
 section.hero .btn-container .btn {
+  text-decoration: none;
   padding: 1rem 2rem;
   border: none;
   font-size: 1.2rem;
