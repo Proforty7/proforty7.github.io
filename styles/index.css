@@ -83,7 +83,13 @@ section.hero .name {
 section.hero .title {
   margin-top: 1rem;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  section.hero .title {
+    font-size: 1.8rem;
+  }
 }
 
 section.hero .btn-container {
@@ -165,6 +171,14 @@ section.work .projects {
   grid-gap: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  section.work .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "img" "text";
+  }
+}
+
 section.work .projects .tech {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +201,12 @@ section.work .projects .img-container img {
   width: 90%;
 }
 
+@media screen and (max-width: 768px) {
+  section.work .projects .img-container img {
+    width: 100%;
+  }
+}
+
 section.work .projects .img-container {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -202,6 +222,12 @@ section.work .projects .text-container {
   grid-area: text;
   font-size: 1.5rem;
   width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  section.work .projects .text-container {
+    width: 100%;
+  }
 }
 
 section.work .projects .text-container h2 {

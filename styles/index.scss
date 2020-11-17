@@ -73,7 +73,11 @@ section.hero {
   .title {
     margin-top: 1rem;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 300;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
 
   .btn-container {
@@ -132,8 +136,17 @@ section.work {
     margin: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "img img text" "img img text";
+    grid-template-areas:
+      "img img text"
+      "img img text";
     grid-gap: 10px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "img"
+        "text";
+    }
 
     .tech {
       display: flex;
@@ -142,7 +155,7 @@ section.work {
 
       span {
         font-size: 1rem;
-        background-color: #7f95d1;
+        background-color: map-get($map: $colors, $key: primary);
         padding: 0.5rem 1rem;
         border-radius: 20px;
         margin-right: 1rem;
@@ -152,6 +165,10 @@ section.work {
 
     .img-container img {
       width: 90%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     .img-container {
@@ -162,6 +179,10 @@ section.work {
       grid-area: text;
       font-size: 1.5rem;
       width: 70%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
 
       h2 {
         font-size: 2rem;
@@ -192,12 +213,13 @@ section.work {
           }
 
           &.live {
-            background-color: #7f95d1;
+            background-color: map-get($map: $colors, $key: primary);
+
             border-radius: 5px;
           }
 
           &.code {
-            color: #7f95d1;
+            color: map-get($map: $colors, $key: primary);
           }
         }
       }
